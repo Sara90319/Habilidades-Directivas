@@ -11,6 +11,8 @@ app.use(express.urlencoded({extended: false}));
 //Rutas para las peticiones http
 app.use(require('./src/rutas'));
 
+app.set("view engine", "ejs");
+
 //Iniciar servidor
 app.listen(app.get('port'),()=>{
     console.log(`Servidor en puerto ${app.get('port')}`);

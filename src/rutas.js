@@ -8,6 +8,10 @@ const acciones = require('./acciones');
 //Modulo que valida la identidad de un usuario o administrador.
 const authentication = require('./authentication');
 
+router.get("/", function(req, res){
+    res.render("principal");
+});    
+
 //Consulta todas las peliculas disponibles en la base de datos
 //La consulta solo se puede realizar si el usuario ha iniciado sesion
 router.get('/movies',authentication.validateToken, acciones.get_movies);
