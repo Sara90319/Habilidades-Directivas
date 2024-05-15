@@ -1,0 +1,323 @@
+/* estas son las variables que estaremos reutilizando */
+:root {
+    --primarioclaro: rgba(228, 144, 144, 0.7);
+    ;
+    --principal: #FF0000;
+    --negro: #000000;
+    --gristransparente: #60606055;
+    --blanco: #ffffff;
+    --fuentePrincipal: 'Sansita One', serif;
+}
+
+/* esto es para que cada rem sea igual a 10px */
+html {
+    font-size: 62.5%;
+}
+
+
+/* globales */
+body {
+    background-color: var(--blanco);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: var(--blanco);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: var(--primario);
+    font-family: var(--fuentePrincipal);
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+
+h2 {
+    font-size: 3.8rem;
+}
+
+h3 {
+    font-size: 2.9rem;
+    color: var(--blanco);
+
+}
+
+
+/*INDEX*/
+.inicio {
+    background-image: url(imagenes/butacas.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.tituloPrincipal {
+    color: var(--blanco);
+    margin-top: 15.8rem;
+}
+
+.formulario {
+
+    width: 51rem;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 2rem;
+}
+
+.formulario_campo {
+    text-align: center;
+    height: 5.2rem;
+    border: none;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: .5rem;
+    background-color: var(--primarioclaro);
+}
+
+/* Aplicar estilos al input */
+.formulario_campo input {
+    width: 100%;
+    /* Ancho del input al 100% del contenedor */
+    height: 100%;
+    /* Altura del input al 100% del contenedor */
+    background-color: transparent;
+    /* Color de placeholder blanco */
+    border: none;
+    outline: none;
+    /* Eliminar resaltado al enfocar */
+    color: var(--blanco);
+    size: 2rem;
+}
+
+/* Aumentar el tamaño de la fuente cuando se escribe */
+.formulario_campo input:focus {
+    font-size: 2rem;
+    /* Nuevo tamaño de fuente al enfocar */
+    text-align: center;
+}
+
+/* Aplicar estilos al placeholder */
+.formulario_campo input::placeholder {
+
+    color: white;
+    /* Color de placeholder blanco */
+    font-size: 2rem;
+    /* Aumentar el tamaño del texto del placeholder */
+    text-align: center;
+    /* Centrar el texto del placeholder */
+}
+
+.links {
+    text-align: center;
+}
+
+.boton {
+    background-color: var(--principal);
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    margin-bottom: .9rem;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 10%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    /* Cambiar el cursor a una mano al pasar por encima */
+}
+
+.texto_acceso {
+    color: var(--blanco);
+    font-size: 1.8rem;
+}
+
+.texto_administrador {
+    color: var(--blanco);
+    font-size: 1.8rem;
+    position: fixed;
+    /* Fijar posición */
+    bottom: 0;
+    /* Alinear abajo */
+    right: 0;
+    /* Alinear a la derecha */
+    margin: 1rem;
+    /* Margen */
+}
+
+/*Principal*/
+.principal_todo {
+    background-color: var(--negro);
+
+}
+
+.principal {
+    background-image: url(imagenes/los-simpsons.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 70rem;
+    position: relative;
+    width: 100%;
+}
+
+.principal__cartelera {
+    position: absolute;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.808), rgba(0, 0, 0));
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cerrar_sesion {
+    text-align: right;
+    margin-top: 0rem;
+    margin-right: .9rem;
+}
+
+.principal__tituloPrincipal {
+    color: var(--blanco);
+    margin-top: 35rem;
+    margin-bottom: 0rem;
+}
+
+.principal__textoSecundario {
+    color: var(--blanco);
+    text-align: center;
+    letter-spacing: .2rem;
+    padding-top: 1rem;
+}
+
+/* navegacion */
+.navegacion {
+    background-color: var(--primario);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 15rem;
+}
+
+
+.boton__navegacion {
+    background-color: var(--gristransparente);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 20rem;
+    text-align: center;
+}
+
+
+/*Peliculas*/
+.peliculas {
+    max-width: 150rem;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.galeria__peliculas {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 30rem;
+    gap: 1rem;
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+}
+
+.peliculas__tituloPrincipal {
+    color: var(--blanco);
+    font-size: 4rem;
+    text-align: left;
+    letter-spacing: .2rem;
+
+}
+
+.galeria__normal {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.peliculas__genero {
+    color: var(--blanco);
+    font-size: 3rem;
+    letter-spacing: .5rem;
+    text-align: left;
+    font-weight: bold;
+
+}
+
+.peliculas__actores {
+    max-width: 200rem;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.galeria__peliculas__actores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 30rem;
+    gap: 1rem;
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+}
+
+.galeria__actores {
+    width: 100%;
+    height: 50rem;
+    object-fit: cover;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.actor__nombre{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.catalogo__mod_aña {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.boton__navegacion__admi{
+    background-color: var(--principal);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 20rem;
+    text-align: center;
+}
