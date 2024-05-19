@@ -8,8 +8,13 @@ const acciones = require('./acciones');
 //Modulo que valida la identidad de un usuario o administrador.
 const authentication = require('./authentication');
 
+//Ruta principal de la aplicacion
 router.get("/", function(req, res){
     res.render("index");
+});
+//ruta para iniciar sesion como administrador
+router.get("/admin", function(req, res){
+    res.render("inicioadministrador");
 });    
 
 //Consulta todas las peliculas disponibles en la base de datos
