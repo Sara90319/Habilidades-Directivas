@@ -9,7 +9,7 @@ const acciones = require('./acciones');
 const authentication = require('./authentication');
 
 router.get("/", function(req, res){
-    res.render("principal");
+    res.render("index");
 });    
 
 //Consulta todas las peliculas disponibles en la base de datos

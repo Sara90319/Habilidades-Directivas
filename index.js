@@ -12,6 +12,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(require('./src/rutas'));
 
 app.set("view engine", "ejs");
+app.use(express.static(__dirname + '/public'));
 
 //Iniciar servidor
 app.listen(app.get('port'),()=>{
