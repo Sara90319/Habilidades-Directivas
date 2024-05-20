@@ -25,6 +25,10 @@ router.get("/admin/addmovie", function(req, res){
     res.render("agregarpelicula");
 });
 
+router.get("/admin/deletemovie", function(req, res){
+    res.render("eliminarpelicula");
+});
+
 //Consulta todas las peliculas disponibles en la base de datos
 //La consulta solo se puede realizar si el usuario ha iniciado sesion
 router.get('/movies',authentication.validateToken, acciones.get_movies);
