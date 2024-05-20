@@ -3,7 +3,6 @@ const connection = require('./conexion');
 //Modulo que valida usuarios, administradores y genera tokens de acceso
 const authentication = require('./authentication');
 
-
 /*
 *** Consulta todas las peliculas disponibles en la base de datos
 *** y las devuelve en un formato json

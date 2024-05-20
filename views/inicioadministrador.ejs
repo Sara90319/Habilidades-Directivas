@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- mandar a traer las hojas de css y estilos de fuente  -->
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="/css/estilos.css">
   <link href='https://fonts.googleapis.com/css?family=Sansita One' rel='stylesheet'>
 
   <title>REGISTRO</title>
@@ -15,7 +15,7 @@
 <body class="inicio">
   <h1 class="tituloPrincipal">Inicia como administrador</h1>
 
-  <form class="formulario" action="###" method="post">
+  <form class="formulario" onsubmit="return verificarCredenciales(event)">
 
     <div class="formulario_campo">
       <input type="email" id="mail" name="user_mail" placeholder="Correo electrónico" />
@@ -24,15 +24,36 @@
     <div class="formulario_campo">
       <input type="password" id="contraseña" name="contraseña" placeholder="ingresa contraseña"></textarea>
     </div>
+
+    <div class="links">
+      <button class="boton" type="submit">ACCEDE</button>
+  </div>
   </form>
 
-  <div class="links">
-    <a href="Administrador.html">
-      <button class="boton">ACCEDE</button>
-    </a>
-
-  </div>
+  
   <a class="texto_administrador" href="/">regresar a pagina principal</a>
+
+  <script>
+    // Variables con credenciales predefinidas
+    const correoValido = "admin@example.com";
+    const contraseñaValida = "admin123";
+
+    function verificarCredenciales(event) {
+      event.preventDefault(); // Evita el envío del formulario
+
+      // Obtener valores ingresados
+      const correoIngresado = document.getElementById('mail').value;
+      const contraseñaIngresada = document.getElementById('contraseña').value;
+
+      // Verificar credenciales
+      if (correoIngresado === correoValido && contraseñaIngresada === contraseñaValida) {
+        window.location.href = "/admin/inicio"; // Redirige a la página de administrador
+      } else {
+        alert("Credenciales incorrectas. Inténtalo de nuevo.");
+      }
+    }
+  </script>
+
 </body>
 
 </html>

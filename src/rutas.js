@@ -15,7 +15,11 @@ router.get("/", function(req, res){
 //ruta para iniciar sesion como administrador
 router.get("/admin", function(req, res){
     res.render("inicioadministrador");
-});    
+});
+
+router.get("/admin/inicio", function(req, res){
+    res.render("Administrador");
+});
 
 //Consulta todas las peliculas disponibles en la base de datos
 //La consulta solo se puede realizar si el usuario ha iniciado sesion
