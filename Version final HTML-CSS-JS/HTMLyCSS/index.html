@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- mandar a traer las hojas de css y estilos de fuente  -->
+    <link rel="stylesheet" href="estilos.css">
+    <link href='https://fonts.googleapis.com/css?family=Sansita One' rel='stylesheet'>
+
+    <title>INICIO</title>
+</head>
+
+<body class="principal_todo">
+    <div class="principal">
+        <a href="inicioadministrador.html">
+            <p class="cerrar_sesion" >iniciar como administrador</p>
+        </a>
+        <div class="principal__cartelera">
+            <h1 class="principal__tituloPrincipal">Disfruta de las mejores reseñas de tus peliculas y series</h1>
+
+        </div>
+
+    </div>
+    <h3 class="principal__textoSecundario">Explora nuestras novedades</h3>
+    <nav class="navegacion">
+        <a class="boton__navegacion" href="#peliculas">PELICULAS</a>
+        <a class="boton__navegacion" href="#genero">GENERO</a>
+        <a class="boton__navegacion" href="#actores">ACTORES</a>
+    </nav>
+
+
+    <h2 class="peliculas__tituloPrincipal" id="peliculas">Catalogo de peliculas</h2>
+
+    <nav class="genero ">
+        <nav class="peliculas">
+            <div class="galeria__peliculas">
+
+                <img class="galeria__normal" src="imagenes/TITANIC.webp" alt="TITANIC">
+                <div class="galeria__peliculas__info">
+                    <p>TITANIC</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas nesciunt quibusdam
+                        consequuntur mollitia.</p>
+                    <p>Calificación:</p>
+                    <div class="calificacion">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                </div>
+
+                <img class="galeria__normal" src="imagenes/KUNG FU PANDA.webp" alt="KUNG FU PANDA">
+                <div class="galeria__peliculas__info">
+                    <p>KUNG FU PANDA</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas nesciunt quibusdam
+                        consequuntur mollitia.</p>
+                    <p>Calificación:</p>
+                    <div class="calificacion">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                </div>
+
+                <img class="galeria__normal" src="imagenes/MOHANA.webp" alt="MOHANA">
+                <div class="galeria__peliculas__info">
+                    <p>MOHANA</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas nesciunt quibusdam
+                        consequuntur mollitia.</p>
+                    <p>Calificación:</p>
+                    <div class="calificacion">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                </div>
+
+                <img class="galeria__normal" src="imagenes/DIARIO DE UNA PASION.jpg" alt="DIARIO DE UNA PASION">
+                <div class="galeria__peliculas__info">
+                    <p>DIARIO DE UNA PASION</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas nesciunt quibusdam
+                        consequuntur mollitia.</p>
+                    <p>Calificación:</p>
+                    <div class="calificacion">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                </div>
+
+                <img class="galeria__normal" src="imagenes/EL ULTIMO MAESTRO AIRE.jpg" alt="EL ULTIMO MAESTRO AIRE">
+                <div class="galeria__peliculas__info">
+                    <p>EL ULTIMO MAESTRO AIRE</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas nesciunt quibusdam
+                        consequuntur mollitia.</p>
+                    <p>Calificación:</p>
+                    <div class="calificacion">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                </div>
+
+                <img class="galeria__normal" src="imagenes/LIBRO DE LA VDA.webp" alt="LIBRO DE LA VIDA">
+                <div class="galeria__peliculas__info">
+                    <p>LIBRO DE LA VIDA</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas nesciunt quibusdam
+                        consequuntur mollitia.</p>
+                    <p>Calificación:</p>
+                    <div class="calificacion">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </nav>
+
+
+    <h2 class="peliculas__tituloPrincipal" id="genero">Explora por generos</h2>
+
+    <nav class="genero anime">
+        <nav class="peliculas">
+            <p class="peliculas__genero">anime</p>
+            <div class="galeria__peliculas">
+
+                <img class="galeria__normal" src="imagenes/MI VECINO TOTORO.webp" alt="TITANIC">
+                <div class="galeria__peliculas__info">
+                    <p>MI VECONO TOTORO</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas nesciunt quibusdam
+                        consequuntur mollitia.</p>
+                    <p>Calificación:</p>
+                    <div class="calificacion">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                </div>
+
+                <img class="galeria__normal" src="imagenes/DEMON SLAYER.jpeg" alt="KUNG FU PANDA">
+                <div class="galeria__peliculas__info">
+                    <p>DEMON SLAYER</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas nesciunt quibusdam
+                        consequuntur mollitia.</p>
+                    <p>Calificación:</p>
+                    <div class="calificacion">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                </div>
+
+                <img class="galeria__normal" src="imagenes/DRAGON BALL Z.jpg" alt="MOHANA">
+                <div class="galeria__peliculas__info">
+                    <p>DRAGON BALL Z</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas nesciunt quibusdam
+                        consequuntur mollitia.</p>
+                    <p>Calificación:</p>
+                    <div class="calificacion">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </nav>
+    </nav>
+
+    <nav class="genero accionAventura">
+        <nav class="peliculas">
+            <p class="peliculas__genero">Accion y aventura</p>
+            <div class="galeria__peliculas">
+                <img class="galeria__normal" src="imagenes/RAPIDOS Y FURIOSOS.webp" alt="DIARIO DE UNA PASION">
+                <div class="galeria__peliculas__info">
+                    <p>RAPIDOS Y FURISOS 5</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas nesciunt quibusdam
+                        consequuntur mollitia.</p>
+                    <p>Calificación:</p>
+                    <div class="calificacion">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                </div>
+
+                <img class="galeria__normal" src="imagenes/AVATAR 2.jpg" alt="EL ULTIMO MAESTRO AIRE">
+                <div class="galeria__peliculas__info">
+                    <p>AVATAR 2</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas nesciunt quibusdam
+                        consequuntur mollitia.</p>
+                    <p>Calificación:</p>
+                    <div class="calificacion">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                </div>
+
+                <img class="galeria__normal" src="imagenes/LOS JUEGOS DEL HAMBRE.jpg" alt="LIBRO DE LA VIDA">
+                <div class="galeria__peliculas__info">
+                    <p>LOS JUEGOS DEL HAMBRE</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas nesciunt quibusdam
+                        consequuntur mollitia.</p>
+                    <p>Calificación:</p>
+                    <div class="calificacion">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </nav>
+
+    <nav class="actores">
+        <h2 class="peliculas__tituloPrincipal" id="actores">Conoce el trabajo de tus actores</h2>
+
+        <nav class="peliculas__actores">
+            <div class="galeria__peliculas__actores">
+
+                <div class="galeria__peliculas__info">
+                    <img class="galeria__actores" src="imagenes/MARGOT ROBBIE.webp" alt="TITANIC">
+                    <p class="actor__nombre">MARGOT ROBBIE</p>
+                    <div class="calificacion">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                </div>
+
+                <div class="galeria__peliculas__info">
+                    <img class="galeria__actores" src="imagenes/HENRY CAVILL.webp" alt="KUNG FU PANDA">
+                    <p class="actor__nombre">HENRY CAVILL</p>
+                    <div class="calificacion">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                </div>
+
+                <div class="galeria__peliculas__info">
+                    <img class="galeria__actores" src="imagenes/timothee chalamet.webp" alt="MOHANA">
+
+                    <p class="actor__nombre">TIMOTHEE CHALAMET</p>
+                    <div class="calificacion">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                </div>
+
+                <div class="galeria__peliculas__info">
+                    <img class="galeria__actores" src="imagenes/GAL GADOT.jpg" alt="MOHANA">
+
+                    <p class="actor__nombre">GAL GADOT</p>
+                    <div class="calificacion">
+                        <font-awesome-icon :icon="['fas', 'star']" />
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </nav>
+    </nav>
+
+</body>
+
+</html>
