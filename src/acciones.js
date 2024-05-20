@@ -284,14 +284,18 @@ module.exports.alter_movie_img = (req, res) =>{
 *** el formato de la fecha debe de ser: AAAA-MM-DD
 */
 module.exports.create_movie = (req, res) =>{
-    const id_cliente = req.body.id_cliente;
+    /*const id_cliente = req.body.id_cliente;
     const id_administrador = req.body.id_administrador;
     const titulo = req.body.titulo;
     const calificacion = req.body.calificacion;
     const fecha = req.body.fecha;
-    const imagen = req.body.imagen;
+    const imagen = req.body.imagen;*/
+
+    const moviename = req.body.moviename;
+    const moviedescription = req.body.moviedescription;
+    const movieimage = req.body.movieimage;
     
-    connection.query('INSERT INTO pelicula (id_cliente, id_administrador, titulo, calificacion, fecha, imagen) VALUES (?, ?, ?, ?, ?, ?)', [id_cliente, id_administrador, titulo, calificacion, fecha, imagen], function(error, result, fields){
+    connection.query('INSERT INTO pelicula (titulo, descripcion, imagen) VALUES (?, ?, ?)', [moviename, moviedescription, movieimage], function(error, result, fields){
         if(error) throw error;
         if(result.affectedRows > 0){
             console.log("Pelicula creada")

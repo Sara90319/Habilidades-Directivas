@@ -15,27 +15,27 @@
 <body class="inicio">
     <H1 class="tituloP__formulario">AGREGAR PELICULA</H1>
 
-    <form class="formulario_eliminar_agregar" action="###">
+    <form class="formulario_eliminar_agregar" action="/create/movie" method="post">
 
             <div class="formulario__campos">
                 <div class="formulario__campo">
                     <label for="">Nombre de la pelicula </label>
-                    <input class="formulario__input-text" type="text" placeholder="Nombre de la pelicula">
+                    <input class="formulario__input-text" type="text" placeholder="Nombre de la pelicula" id="moviename" name="moviename">
                 </div>
 
                 <div class="formulario__campo">
                     <label for="">Descripcion </label>
-                    <input class="formulario__input-text" type="text">
+                    <input class="formulario__input-text" type="text" id="moviedescription" name="moviedescription">
                 </div>
                 
                 <div class="formulario__campo">
                     <label for="">URL imagen </label>
-                    <input class="formulario__input-text" type="text" placeholder="URL">
+                    <input class="formulario__input-text" type="text" placeholder="URL" id="movieimage" name="movieimage">
                 </div>
 
             </div>
             <div class="alinear-derecha flex">
-                <input class="boton--formulario" type="submit" value="Enviar">
+                <input class="boton--formulario" type="submit" value="Registrar">
             </div>
 
     </form>

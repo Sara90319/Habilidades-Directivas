@@ -78,7 +78,7 @@ router.post('/alter/img/movie/:id',authentication.validateTokenAdmin, acciones.a
 
 //Permite que un administrador pueda crear una nueva pelicula
 //El cambio solo se puede realizar si el usuario que inicio sesion es un administrador
-router.post('/create/movie', authentication.validateTokenAdmin, acciones.create_movie);
+router.post('/create/movie', acciones.create_movie);
 
 //Permite a un administrador eliminar una pelicula mediante el id de la pelicula
 //El cambio solo se puede realizar si el usuario que inicio sesion es un administrador
