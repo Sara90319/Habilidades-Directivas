@@ -300,11 +300,11 @@ module.exports.create_movie = (req, res) =>{
         if(error) throw error;
         if(result.affectedRows > 0){
             message = "Pelicula creada";
-            res.render("/create/movie", {message});
+            res.render("agregarpelicula", {message});
         }
         else{
             message = "No se pudo crear la pelicula";
-            res.render("/create/movie", {message});
+            res.render("agregarpelicula", {message});
         }
     });
 }
@@ -324,11 +324,11 @@ module.exports.delete_movie = (req, res) =>{
         if(error) throw error;
         if(result.affectedRows > 0){
             message = "Pelicula eliminada";
-            res.render("/delete/movie", {message});
+            res.render("eliminarpelicula", {message});
         }
         else{
             message = "No se pudo eliminar la pelicula";
-            res.render("/delete/movie", {message});
+            res.render("eliminarpelicula", {message});
         }
     });
 }
