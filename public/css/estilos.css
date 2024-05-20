@@ -67,7 +67,7 @@ h3 {
 
 /*INDEX*/
 .inicio {
-    background-image: url(imagenes/butacas.jpg);
+    background-image: url(images/butacas.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -173,7 +173,7 @@ h3 {
 }
 
 .principal {
-    background-image: url(imagenes/los-simpsons.jpg);
+    background-image: url(images/los-simpsons.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
