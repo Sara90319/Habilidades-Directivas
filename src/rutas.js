@@ -82,7 +82,7 @@ router.post('/create/movie', acciones.create_movie);
 
 //Permite a un administrador eliminar una pelicula mediante el id de la pelicula
 //El cambio solo se puede realizar si el usuario que inicio sesion es un administrador
-router.post('/delete/movie', authentication.validateTokenAdmin, acciones.delete_movie);
+router.post('/delete/movie', acciones.delete_movie);
 
 
 //Exporta el modulo que gestiona las rutas de peticiones

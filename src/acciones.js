@@ -314,9 +314,9 @@ module.exports.create_movie = (req, res) =>{
 *** <input type="text" name="id_pelicula" required>
 */
 module.exports.delete_movie = (req, res) =>{
-    const id_pelicula = req.body.id_pelicula;
+    const id_pelicula = req.body.id;
     
-    connection.query('DELETE FROM pelicula WHERE id_pelicula = ?', id_pelicula, function(error, result, fields){
+    connection.query('DELETE FROM pelicula WHERE id = ?', id_pelicula, function(error, result, fields){
         if(error) throw error;
         if(result.affectedRows > 0){
             console.log("Pelicula eliminada")
