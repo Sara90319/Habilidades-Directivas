@@ -294,14 +294,17 @@ module.exports.create_movie = (req, res) =>{
     const moviename = req.body.moviename;
     const moviedescription = req.body.moviedescription;
     const movieimage = req.body.movieimage;
+    let message;
     
     connection.query('INSERT INTO pelicula (titulo, descripcion, imagen) VALUES (?, ?, ?)', [moviename, moviedescription, movieimage], function(error, result, fields){
         if(error) throw error;
         if(result.affectedRows > 0){
-            console.log("Pelicula creada")
+            message = "Pelicula creada";
+            res.render("/create/movie", {message});
         }
         else{
-            console.log("No se pudo crear")
+            message = "No se pudo crear la pelicula";
+            res.render("/create/movie", {message});
         }
     });
 }
@@ -315,14 +318,17 @@ module.exports.create_movie = (req, res) =>{
 */
 module.exports.delete_movie = (req, res) =>{
     const id_pelicula = req.body.id;
+    let message;
     
     connection.query('DELETE FROM pelicula WHERE id = ?', id_pelicula, function(error, result, fields){
         if(error) throw error;
         if(result.affectedRows > 0){
-            console.log("Pelicula eliminada")
+            message = "Pelicula eliminada";
+            res.render("/delete/movie", {message});
         }
         else{
-            console.log("No se pudo eliminar")
+            message = "No se pudo eliminar la pelicula";
+            res.render("/delete/movie", {message});
         }
     });
 }
