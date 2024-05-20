@@ -21,6 +21,10 @@ router.get("/admin/inicio", function(req, res){
     res.render("Administrador");
 });
 
+router.get("/admin/addmovie", function(req, res){
+    res.render("agregarpelicula");
+});
+
 //Consulta todas las peliculas disponibles en la base de datos
 //La consulta solo se puede realizar si el usuario ha iniciado sesion
 router.get('/movies',authentication.validateToken, acciones.get_movies);
