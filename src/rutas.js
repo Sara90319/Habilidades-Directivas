@@ -9,9 +9,12 @@ const acciones = require('./acciones');
 const authentication = require('./authentication');
 
 //Ruta principal de la aplicacion
-router.get("/", function(req, res){
+/*router.get("/", function(req, res){
     res.render("index");
-});
+});*/
+
+router.get("/", acciones.get_movies);
+
 //ruta para iniciar sesion como administrador
 router.get("/admin", function(req, res){
     res.render("inicioadministrador");
@@ -31,7 +34,7 @@ router.get("/admin/deletemovie", function(req, res){
 
 //Consulta todas las peliculas disponibles en la base de datos
 //La consulta solo se puede realizar si el usuario ha iniciado sesion
-router.get('/movies',authentication.validateToken, acciones.get_movies);
+router.get('/movies', acciones.get_movies);
 
 //Consulta informacion de una sola pelicula mediante su ID
 //La consulta solo se puede realizar si el usuario ha iniciado sesion

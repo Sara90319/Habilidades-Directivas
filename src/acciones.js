@@ -10,7 +10,7 @@ const authentication = require('./authentication');
 module.exports.get_movies = (req, res) =>{
     connection.query('SELECT * FROM pelicula', (err, rows, fields) => {
         if(!err){
-            res.json(rows);
+            res.render("index", {movies:rows});
             
         }
         else{
