@@ -11,7 +11,17 @@ module.exports.get_movies = (req, res) =>{
     connection.query('SELECT * FROM pelicula', (err, rows, fields) => {
         if(!err){
             res.render("index", {movies:rows});
-            
+        }
+        else{
+            console.log(err);
+        }
+    });
+}
+
+module.exports.get_movies_admin = (req, res) =>{
+    connection.query('SELECT * FROM pelicula', (err, rows, fields) => {
+        if(!err){
+            res.render("Administrador", {movies:rows});
         }
         else{
             console.log(err);

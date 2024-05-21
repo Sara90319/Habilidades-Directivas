@@ -20,9 +20,8 @@ router.get("/admin", function(req, res){
     res.render("inicioadministrador");
 });
 
-router.get("/admin/inicio", function(req, res){
-    res.render("Administrador");
-});
+router.get("/admin/inicio", acciones.get_movies_admin);
+    
 
 router.get("/admin/addmovie", function(req, res){
     res.render("agregarpelicula");

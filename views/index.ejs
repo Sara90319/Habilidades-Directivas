@@ -14,10 +14,6 @@
 
 <body class="principal_todo">
 
-        <script>
-            console.log('<%= movies %>');
-        </script>
-
     <div class="principal">
         <a href="/admin">
             <p class="cerrar_sesion" >iniciar como administrador</p>
@@ -96,6 +92,14 @@
                         <font-awesome-icon :icon="['fas', 'star']" />
                     </div>
                 </div>
+
+                <% movies.forEach(movie => { %>
+                    <img class="galeria__normal" src="<%= movie.imagen %>">
+                    <div class="galeria__peliculas__info">
+                        <p><%= movie.titulo %></p>
+                        <p><%= movie.descripcion %></p>
+                    </div>
+                <% }); %>
 
                 <img class="galeria__normal" src="images/LIBRO DE LA VDA.webp" alt="LIBRO DE LA VIDA">
                 <div class="galeria__peliculas__info">
