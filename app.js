@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 //Configuracion del puerto del servidor
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 8080);
 
 //middleware
 app.use(express.json());
