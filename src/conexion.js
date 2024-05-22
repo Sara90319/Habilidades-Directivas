@@ -5,8 +5,8 @@ const mysql = require('mysql2');
 //Configuracion de los parametros para la conexion
 //Los valores se encuentran en el archivo .env
 const connection = mysql.createConnection({
-    host: "cartelera-server.mysql.database.azure.com",
-    user: "nzbmajjwoc",
+    host: "proyectohabilidadesdirectivasdb.mysql.database.azure.com",
+    user: "AdminDB",
     password: "aA1234567890!",
     database: "cartelera-database"
 });
