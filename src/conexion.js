@@ -5,10 +5,10 @@ const mysql = require('mysql2');
 //Configuracion de los parametros para la conexion
 //Los valores se encuentran en el archivo .env
 const connection = mysql.createConnection({
-    host: process.env.HOST,
-    user: process.env.USER,
-    password: process.env.PASSWORD,
-    database: process.env.DATABASE
+    host: "localhost",
+    user: "root",
+    password: "root",
+    database: "prueba"
 });
 
 //Prueba de conexion a la base de datos.

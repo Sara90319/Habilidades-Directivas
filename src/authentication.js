@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 // Genera un token de acceso, dicho token contiene username y rol del usuario
 // El token generado solo dura 30 minutos
 function generateAccessToken(user){
-    return jwt.sign(user, process.env.SECRET, {expiresIn: '30m'});
+    return jwt.sign(user, N1HraDt8ozi0tGNB4gHnd9u9qkqwp9OPK2jyXumNfqhB7Ax61E6FOGlJWiaUCPxE37ZdqS, {expiresIn: '30m'});
 }
 
 // Valida el token recibido, si es un token valido permite la ejecucion de la siguiente funcion
@@ -13,7 +13,7 @@ function validateToken(req, res, next){
     const accsessToken = req.headers['authorization'];
     if(!accsessToken) console.log('token Vacio');
     
-    jwt.verify(accsessToken, process.env.SECRET, (error, user)=>{
+    jwt.verify(accsessToken, N1HraDt8ozi0tGNB4gHnd9u9qkqwp9OPK2jyXumNfqhB7Ax61E6FOGlJWiaUCPxE37ZdqS, (error, user)=>{
         if(error){
             console.log('Acces denided, token expired or incorrect')
         }
@@ -30,7 +30,7 @@ function validateTokenAdmin(req, res, next){
     const accsessToken = req.headers['authorization'];
     if(!accsessToken) console.log('token Vacio');
     
-    jwt.verify(accsessToken, process.env.SECRET, (error, user)=>{
+    jwt.verify(accsessToken, N1HraDt8ozi0tGNB4gHnd9u9qkqwp9OPK2jyXumNfqhB7Ax61E6FOGlJWiaUCPxE37ZdqS, (error, user)=>{
         if(error){
             console.log('Acces denided, token expired or incorrect')
         }
